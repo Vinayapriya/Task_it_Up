@@ -86,9 +86,9 @@ MIT License - feel free to use this code for your own projects!
 
 ## Author
 
-[Your Name]
-- GitHub: [Your GitHub Profile]
-- LinkedIn: [Your LinkedIn Profile]
+Vinayapriya C C
+- GitHub: https://github.com/Vinayapriya
+- LinkedIn: https://www.linkedin.com/in/vinayapriya-c-c-136126291
 
 ## Acknowledgments
 
