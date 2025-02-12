@@ -19,7 +19,7 @@ A clean, responsive, and user-friendly Todo List application built with vanilla 
 ![Desktop View]()
 
 ### Mobile View
-![Mobile View]()
+![Mobile View](https://github.com/Vinayapriya/Task_it_Up/blob/c1b1dd6c603553fe64fb4cdddfd514a1b532ecbb/MobileView.jpg)
 
 ## Technical Details
 
