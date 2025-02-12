@@ -16,10 +16,10 @@ A clean, responsive, and user-friendly Todo List application built with vanilla 
 ## Screenshots
 
 ### Desktop View
-![Desktop View](https://github.com/Vinayapriya/Task_it_Up/blob/dfb054633ccfdd73e8f9239240ba49fd52a731b1/Screenshot%202025-02-10%20203513.png)
+![Desktop View]()
 
 ### Mobile View
-![Mobile View](https://github.com/Vinayapriya/Task_it_Up/blob/cc19811e7d10b0c57ea43835608b6e1397ed7986/MobileView.jpg)
+![Mobile View]()
 
 ## Technical Details
 
