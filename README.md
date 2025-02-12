@@ -3,8 +3,7 @@
 A clean, responsive, and user-friendly Todo List application built with vanilla HTML, CSS, and JavaScript. This project was created for a front-end development competition.
 
 ## Features
-
-- ✨ Add, edit, and delete tasks
+- ✨ Add, edit, dark mode and delete tasks
 - ✅ Mark tasks as completed
 - 💾 Persistent storage using localStorage
 - 🎨 Clean and intuitive user interface
@@ -60,20 +59,12 @@ todo-list/
 - Local storage integration for data persistence
 - Cross-browser compatibility
 
-## Browser Support
-
-✅ Chrome
-✅ Firefox
-✅ Safari
-✅ Edge
-
 ## Future Enhancements
 
 Potential features that could be added:
 - Task categories
 - Due dates
 - Priority levels
-- Dark mode
 - Data export/import
 
 ## Contributing
