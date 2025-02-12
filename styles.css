@@ -1,242 +1,238 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  
-  body {
-    font-family: system-ui, -apple-system, sans-serif;
-    min-height: 100vh;
-    background: linear-gradient(135deg, #f3e8ff 0%, #dbeafe 100%);
-    line-height: 1.5;
-  }
-  
-  .container {
-    min-height: 100vh;
-    padding: 3rem 1rem;
-  }
-  
-  .todo-card {
-    max-width: 28rem;
-    margin: 0 auto;
-    background: white;
-    border-radius: 0.75rem;
-    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
-    overflow: hidden;
-    padding: 1.5rem;
-  }
-  
-  h1 {
-    font-size: 1.875rem;
-    font-weight: bold;
-    color: #1f2937;
-    margin-bottom: 2rem;
-    text-align: center;
-  }
-  
-  .add-todo-form {
-    display: flex;
-    gap: 0.5rem;
-    margin-bottom: 1.5rem;
-  }
-  
-  input {
-    flex: 1;
-    padding: 0.5rem 1rem;
-    border: 1px solid #d1d5db;
-    border-radius: 0.5rem;
-    outline: none;
-    transition: all 0.2s;
-    font-size: 0.95rem;
-  }
-  
-  input:focus {
-    border-color: #a855f7;
-    box-shadow: 0 0 0 2px rgba(168, 85, 247, 0.2);
-  }
-  
-  button {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.5rem;
-    padding: 0.5rem 1rem;
-    background: #a855f7;
-    color: white;
-    border: none;
-    border-radius: 0.5rem;
-    cursor: pointer;
-    transition: all 0.2s;
-    font-size: 0.95rem;
-  }
-  
-  button:hover {
-    background: #9333ea;
-    transform: translateY(-1px);
-  }
-  
-  button:active {
-    transform: translateY(0);
-  }
-  
-  .todo-list {
-    display: flex;
-    flex-direction: column;
-    gap: 0.75rem;
-  }
-  
-  .todo-item {
-    display: flex;
-    align-items: center;
-    gap: 0.75rem;
-    padding: 0.75rem;
-    background: #f9fafb;
-    border-radius: 0.5rem;
-    transition: all 0.2s;
-    animation: slideIn 0.3s ease-out;
-  }
-  
-  @keyframes slideIn {
-    from {
-      opacity: 0;
-      transform: translateY(-10px);
-    }
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  }
-  
-  .todo-item:hover {
-    background: #f3f4f6;
-  }
-  
-  .todo-text {
-    flex: 1;
-    color: #374151;
-  }
-  
-  .todo-text.completed {
-    color: #9ca3af;
-    text-decoration: line-through;
-  }
-  
-  .todo-actions {
-    display: flex;
-    gap: 0.5rem;
-    opacity: 0;
-    transition: opacity 0.2s;
-  }
-  
-  .todo-item:hover .todo-actions {
-    opacity: 1;
-  }
-  
-  .btn-toggle {
-    color: #9ca3af;
-    background: none;
-    padding: 0.25rem;
-    width: 24px;
-    height: 24px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 1.2rem;
-  }
-  
-  .btn-toggle:hover {
-    color: #a855f7;
-    background: none;
-  }
-  
-  .btn-toggle.completed {
-    color: #a855f7;
-  }
-  
-  .btn-edit, .btn-delete, .btn-save, .btn-cancel {
-    background: none;
-    padding: 0.25rem;
-    width: 24px;
-    height: 24px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 1rem;
-  }
-  
-  .btn-edit {
-    color: #3b82f6;
-  }
-  
-  .btn-edit:hover {
-    color: #2563eb;
-    background: none;
-  }
-  
-  .btn-delete {
-    color: #9ca3af;
-  }
-  
-  .btn-delete:hover {
-    color: #ef4444;
-    background: none;
-  }
-  
-  .btn-save {
-    color: #22c55e;
-  }
-  
-  .btn-save:hover {
-    color: #16a34a;
-    background: none;
-  }
-  
-  .btn-cancel {
-    color: #9ca3af;
-  }
-  
-  .btn-cancel:hover {
-    color: #6b7280;
-    background: none;
-  }
-  
-  .edit-form {
-    display: flex;
-    flex: 1;
-    gap: 0.5rem;
-  }
-  
-  .edit-input {
-    flex: 1;
-    padding: 0.25rem 0.75rem;
-  }
-  
-  .empty-state {
-    text-align: center;
-    color: #6b7280;
-    padding: 1.5rem 0;
-  }
-  
-  .icon {
-    font-size: 1.2rem;
-    line-height: 1;
-  }
-  
-  @media (max-width: 480px) {
-    .todo-card {
-      padding: 1rem;
-    }
-  
-    h1 {
-      font-size: 1.5rem;
-      margin-bottom: 1.5rem;
-    }
-  
-    .add-todo-form {
-      flex-direction: column;
-    }
-  
-    .add-todo-form button {
-      width: 100%;
-      justify-content: center;
-    }
-  }
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --bg-gradient-from: #f3e8ff;
+  --bg-gradient-to: #dbeafe;
+  --card-bg: white;
+  --text-primary: #1f2937;
+  --text-secondary: #6b7280;
+  --border-color: #d1d5db;
+  --item-bg: #f9fafb;
+  --item-hover: #f3f4f6;
+  --primary: #8b5cf6;
+  --primary-hover: #7c3aed;
+  --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  --completed-text: #9ca3af;
+}
+
+[data-theme="dark"] {
+  --bg-gradient-from: #1e1b4b;
+  --bg-gradient-to: #1e293b;
+  --card-bg: #1f2937;
+  --text-primary: #f3f4f6;
+  --text-secondary: #9ca3af;
+  --border-color: #374151;
+  --item-bg: #111827;
+  --item-hover: #1f2937;
+  --primary: #8b5cf6;
+  --primary-hover: #7c3aed;
+  --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.2), 0 2px 4px -1px rgba(0, 0, 0, 0.1);
+  --completed-text: #6b7280;
+}
+
+body {
+  font-family: system-ui, -apple-system, sans-serif;
+  min-height: 100vh;
+  background: linear-gradient(135deg, var(--bg-gradient-from) 0%, var(--bg-gradient-to) 100%);
+  line-height: 1.5;
+  transition: background 0.3s ease;
+}
+
+.container {
+  min-height: 100vh;
+  padding: 6rem 1.5rem 1.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.todo-card {
+  width: 100%;
+  max-width: 32rem;
+  background: var(--card-bg);
+  border-radius: 0.75rem;
+  box-shadow: var(--shadow);
+  padding: 1.5rem;
+  transition: background 0.3s ease, box-shadow 0.3s ease;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+h1 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: var(--text-primary);
+  transition: color 0.3s ease;
+}
+
+.theme-toggle {
+  background: none;
+  border: none;
+  padding: 0.5rem;
+  cursor: pointer;
+  font-size: 1.25rem;
+  opacity: 0.8;
+  transition: opacity 0.3s ease;
+}
+
+.theme-toggle:hover {
+  opacity: 1;
+  background: none;
+}
+
+.add-todo-form {
+  display: flex;
+  gap: 0.75rem;
+  margin-bottom: 1.5rem;
+}
+
+input {
+  flex: 1;
+  padding: 0.5rem 1rem;
+  border: 1px solid var(--border-color);
+  border-radius: 0.5rem;
+  outline: none;
+  transition: all 0.2s;
+  background: var(--card-bg);
+  color: var(--text-primary);
+}
+
+input:focus {
+  border-color: var(--primary);
+  box-shadow: 0 0 0 2px rgba(139, 92, 246, 0.2);
+}
+
+input::placeholder {
+  color: var(--text-secondary);
+}
+
+button {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+  background: var(--primary);
+  color: white;
+  border: none;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: all 0.2s;
+  font-size: 0.875rem;
+}
+
+button:hover {
+  background: var(--primary-hover);
+}
+
+.todo-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.todo-item {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 1rem;
+  background: var(--item-bg);
+  border-radius: 0.5rem;
+  transition: all 0.2s;
+}
+
+.todo-item:hover {
+  background: var(--item-hover);
+}
+
+.todo-checkbox {
+  width: 1.5rem;
+  height: 1.5rem;
+  border: 2px solid var(--border-color);
+  border-radius: 9999px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.2s;
+  flex-shrink: 0;
+}
+
+.todo-checkbox.completed {
+  background: var(--primary);
+  border-color: var(--primary);
+  color: white;
+}
+
+.todo-text {
+  flex: 1;
+  color: var(--text-primary);
+  transition: color 0.3s ease;
+}
+
+.todo-text.completed {
+  color: var(--completed-text);
+  text-decoration: line-through;
+}
+
+.todo-actions {
+  display: flex;
+  gap: 0.5rem;
+  opacity: 0;
+  transition: opacity 0.2s;
+}
+
+.todo-item:hover .todo-actions {
+  opacity: 1;
+}
+
+.action-button {
+  background: none;
+  padding: 0.25rem;
+  color: var(--text-secondary);
+  border-radius: 0.25rem;
+}
+
+.action-button:hover {
+  background: none;
+}
+
+.edit-button:hover {
+  color: var(--primary);
+}
+
+.delete-button:hover {
+  color: #ef4444;
+}
+
+.edit-form {
+  flex: 1;
+  display: flex;
+  gap: 0.5rem;
+}
+
+.edit-input {
+  flex: 1;
+}
+
+.save-button:hover {
+  color: #22c55e;
+}
+
+.cancel-button:hover {
+  color: var(--text-secondary);
+}
+
+.empty-state {
+  text-align: center;
+  color: var(--text-secondary);
+  padding: 2rem 0;
+}

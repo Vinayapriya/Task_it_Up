@@ -1,34 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Todo List</title>
-  <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo List</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <div class="container">
-    <div class="todo-card">
-      <h1>Todo List</h1>
-      
-      <form id="todo-form" class="add-todo-form">
-        <input
-          type="text"
-          id="new-todo"
-          placeholder="Add a new todo..."
-          autocomplete="off"
-        />
-        <button type="submit">
-          <span class="icon">+</span>
-          Add
-        </button>
-      </form>
+    <div class="container">
+        <div class="todo-card">
+            <div class="header">
+                <h1>Todo List</h1>
+                <button id="theme-toggle" class="theme-toggle" title="Toggle theme">
+                    <span class="theme-toggle-icon">🌚</span>
+                </button>
+            </div>
+            
+            <form id="todo-form" class="add-todo-form">
+                <input
+                    type="text"
+                    id="new-todo"
+                    placeholder="Add a new todo..."
+                    autocomplete="off"
+                />
+                <button type="submit">
+                    <span class="icon">+</span>
+                    Add
+                </button>
+            </form>
 
-      <div id="todo-list" class="todo-list">
-        <!-- Todos will be inserted here -->
-      </div>
+            <div id="todo-list" class="todo-list">
+                <!-- Todos will be inserted here -->
+            </div>
+        </div>
     </div>
-  </div>
-  <script src="app.js"></script>
+    <script src="app.js"></script>
 </body>
 </html>
